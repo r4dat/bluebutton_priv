@@ -15,3 +15,5 @@ their contributions:
 + [Andrei Sura](http://vivo.ufl.edu/display/n5623984433)
 + [Josh Hanna](http://vivo.ufl.edu/display/n7895189132)
 + [Roy Keyes](http://vivo.ufl.edu/display/n31749)
+
+Additional C32 work was done by Rob Rutherford of the Kansas Healthcare Collaborative.
