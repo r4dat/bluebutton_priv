@@ -8,7 +8,7 @@ def document(c32):
     parse_date = documents.parse_date
     parse_name = documents.parse_name
     parse_address = documents.parse_address
-    data = {}, el
+
 
     doc = c32.section('document')
 
@@ -52,7 +52,7 @@ def document(c32):
     encounter_date = None
     el = el.tag('effectiveTime')
     if not el.is_empty():
-    encounter_date = parse_date(el.attr('value'))
+        encounter_date = parse_date(el.attr('value'))
     
 
     data = wrappers.ObjectWrapper(
