@@ -19,30 +19,30 @@ def encounters(c32):
 
 
     for entry in encounters.entries():
-        date = parse_date(entry.tag('effectivetime').attr('value'))
+        date = parse_date(entry.tag('effectiveTime').attr('value'))
         if not date:
-            date = parse_date(entry.tag('effectivetime').tag('low').attr('value'))
+            date = parse_date(entry.tag('effectiveTime').tag('low').attr('value'))
     
         el = entry.tag('code')
-        name = el.attr('displayname')
+        name = el.attr('displayName')
         code = el.attr('code')
-        code_system = el.attr('codesystem')
-        code_system_name = el.attr('codesystemname')
-        code_system_version = el.attr('codesystemversion')
+        code_system = el.attr('codeSystem')
+        code_system_name = el.attr('codeSystemName')
+        code_system_version = el.attr('codeSystemVersion')
     
         # translation
         el = entry.tag('translation')
-        translation_name = el.attr('displayname')
+        translation_name = el.attr('displayName')
         translation_code = el.attr('code')
-        translation_code_system = el.attr('codesystem')
-        translation_code_system_name = el.attr('codesystemname')
+        translation_code_system = el.attr('codeSystem')
+        translation_code_system_name = el.attr('codeSystemName')
 
         # performer
         el = entry.tag('performer')
         performer_name = el.tag('name').val()
         performer_code = el.attr('code')
-        performer_code_system = el.attr('codesystem')
-        performer_code_system_name = el.attr('codesystemname')
+        performer_code_system = el.attr('codeSystem')
+        performer_code_system_name = el.attr('codeSystemName')
 
         # participant => location
         el = entry.tag('participant')
