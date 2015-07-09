@@ -10,7 +10,7 @@
 
 
 def encounters(c32):
-    data[]
+    data = []
     parse_date = documents.parse_date
     parse_name = documents.parse_name
     parse_address = documents.parse_address
