@@ -89,6 +89,11 @@ class PortTests(unittest.TestCase):
         check('/bluebutton.js/bower_components/sample_ccdas/NIST Samples/CCDA_CCD_b1_Ambulatory_v2.xml')
         check('/bluebutton.js/bower_components/sample_ccdas/NIST Samples/CCDA_CCD_b1_InPatient_v2.xml')
         check('/bluebutton.js/bower_components/sample_ccdas/Transitions of Care Samples/ToC_CCDA_CCD_CompGuideSample_FullXML.xml')
+        # C32s
+        check('/bluebutton.js/spec/javascripts/fixtures/c32/HITSP_C32v2.5_Rev6_16Sections_Entries_MinimalErrors.xml')
+        check('/bluebutton.js/spec/javascripts/fixtures/c32/HITSP_C32_with_HL7_IDs.xml')
+
+
 
     def python_output_is_same_as_javascript(self, section_name=None,
                                             testfile=None):
