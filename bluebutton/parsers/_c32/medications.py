@@ -21,7 +21,7 @@ def medications(c32):
 
     for entry in medications.entries():
         text = None
-        el = entry.tag('substanceAdministration').immediatechildtag('text')
+        el = entry.tag('substanceAdministration').tag('text')
         if not el.is_empty():
             # technically c32s don't use this, but c83s (another ccd) do,
             # and ccdas do, so we may see it anyways
