@@ -37,7 +37,7 @@ def document(c32):
     work_phone = el.attr('value')
     
     documentation_of_list = wrappers.ListWrapper()
-    performers = doc.tag('documentationOf').elsByTag('performer')
+    performers = doc.tag('documentationOf').els_by_tag('performer')
     for p in performers:
         el = p.tag('assignedPerson').tag('name')
         performer_name_dict = parse_name(el)
