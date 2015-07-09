@@ -8,6 +8,7 @@ from . import core
 from . import documents
 from . import parsers
 import documents.ccda
+import documents.c32
 import parsers.ccda
 import parsers.c32
 

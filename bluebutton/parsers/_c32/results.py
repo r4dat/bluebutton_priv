@@ -11,6 +11,7 @@ Parser for the C32 results section
 from ...documents import parse_date
 from ...core import wrappers
 from ... import documents
+from ... import core
 
 def results(c32):
   
