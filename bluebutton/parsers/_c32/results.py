@@ -40,7 +40,7 @@ def results(c32):
 
         for observation in tests:
         # sometimes results organizers contain non-results. we only want tests
-            if (observation.template('2.16.840.1.113883.10.20.1.31').val()):
+            if observation.template('2.16.840.1.113883.10.20.1.31').val():
                 date = parse_date(observation.tag('effectivetime').attr('value'))
 
                 el = observation.tag('code')
