@@ -5,9 +5,9 @@ Created on Fri Jun 26 12:19:08 2015
 @author: RobR
 """
 import re
-out=open(r'C:\Users\robrutherford\Documents\bluebutton_priv\bluebutton\parsers\_c32\proc_out.py','w')
+out=open(r'C:\Users\robrutherford\Documents\bluebutton_priv\bluebutton\parsers\_c32\vit_out.py','w')
 
-with open(r'C:\Users\robrutherford\Documents\bluebutton_priv\bluebutton\parsers\_c32\procedures.js') as f:
+with open(r'C:\Users\robrutherford\Documents\bluebutton_priv\bluebutton\parsers\_c32\vitals.js') as f:
     for line in f:
         dat = line
         # Fix C style comments.
@@ -55,7 +55,8 @@ with open(r'C:\Users\robrutherford\Documents\bluebutton_priv\bluebutton\parsers\
         dat=re.sub('originaltext','originalText',dat)
 
 
-        dat = re.sub('for \(var i.*performers.*\{','for el in performers:',dat)
+        #dat = re.sub('for \(var i.*performers.*\{','for el in performers:',dat)
+        dat = re.sub('\: ','=',dat)
         out.write(dat)
         
 out.close
