@@ -48,7 +48,6 @@ def allergies(c32):
 
         # severity
         el = entry.template('2.16.840.1.113883.10.20.1.55').tag('value')
-        var
         severity = el.attr('displayName')
 
         # participant => allergen
@@ -71,7 +70,6 @@ def allergies(c32):
 
         # status
         el = entry.template('2.16.840.1.113883.10.20.1.39').tag('value')
-        var
         status = el.attr('displayName')
 
         data.append(wrappers.ObjectWrapper(
