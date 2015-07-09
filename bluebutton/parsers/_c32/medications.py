@@ -25,7 +25,7 @@ def medications(c32):
         if not el.is_empty():
             # technically c32s don't use this, but c83s (another ccd) do,
             # and ccdas do, so we may see it anyways
-            text = core.stripwhitespace(el.val())
+            text = core.strip_whitespace(el.val())
 
         effective_times = entry.els_by_tag('effectiveTime')
 
@@ -51,7 +51,7 @@ def medications(c32):
     schedule_period_value = None
     schedule_period_unit = None
 
-    if el and el.attr('xsi:type') === 'PIVL_TS'):
+    if el and el.attr('xsi:type') == 'PIVL_TS':
         institution_specified = el.attr('institutionSpecified')
     if institution_specified == 'true':
         schedule_type= 'frequency'
@@ -63,9 +63,9 @@ def medications(c32):
     schedule_period_unit = el.attr('unit')
 
     el = entry.tag('manufacturedProduct').tag('code')
-    product_name = el.attr('displayName'),
-                   product_code = el.attr('code'),
-                                  product_code_system = el.attr('codeSystem')
+    product_name = el.attr('displayName')
+    product_code = el.attr('code')
+    product_code_system = el.attr('codeSystem')
 
     product_original_text = None
     el = entry.tag('manufacturedProduct').tag('originalText')

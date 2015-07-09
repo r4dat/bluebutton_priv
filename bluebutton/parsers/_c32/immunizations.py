@@ -63,7 +63,7 @@ def immunizations(c32):
 
         # instructions
         el = entry.template('2.16.840.1.113883.10.20.1.49')
-        instructions_text = core.stripwhitespace(el.tag('text').val())
+        instructions_text = core.strip_whitespace(el.tag('text').val())
         el = el.tag('code')
         education_name = el.attr('displayName'),
         education_code = el.attr('code'),

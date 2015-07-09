@@ -44,7 +44,7 @@ def allergies(c32):
         if not reaction_name:
             el = entry.template('2.16.840.1.113883.10.20.1.54').tag('text')
             if not el.is_empty():
-                reaction_name = Core.stripWhitespace(el.val())
+                reaction_name = core.strip_whitespace(el.val())
 
         # severity
         el = entry.template('2.16.840.1.113883.10.20.1.55').tag('value')
@@ -66,7 +66,7 @@ def allergies(c32):
         if not allergen_name:
             el = entry.template('2.16.840.1.113883.3.88.11.83.6').tag('originalText')
             if not el.is_empty():
-                allergen_name = Core.stripWhitespace(el.val())
+                allergen_name = core.strip_whitespace(el.val())
 
         # status
         el = entry.template('2.16.840.1.113883.10.20.1.39').tag('value')
