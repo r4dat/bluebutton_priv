@@ -9,7 +9,7 @@ Parser for the C32 allergies section
 """
 from ...documents import parse_date
 from ...core import wrappers
-
+from ... import core
 
 def allergies(c32):
     data = []

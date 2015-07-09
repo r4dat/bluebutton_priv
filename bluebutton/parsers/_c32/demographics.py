@@ -7,9 +7,10 @@
 '''
  * Parser for the C32 demographics section
  */'''
+from bluebutton.core import codes
+from bluebutton import documents
 from ...core import wrappers
 from ... import core
-from ... import documents
 
 def demographics(c32):
     parse_date = documents.parse_date
