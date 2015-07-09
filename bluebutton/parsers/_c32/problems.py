@@ -70,7 +70,7 @@ def problems(c32):
                 code_system=translation_code_system,
                 code_system_name=translation_code_system_name
             ),
-            comment=comment
+            comment=None #Not part of C32, add to maintain API consistency.
         ))
 
     return data
