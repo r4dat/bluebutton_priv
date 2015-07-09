@@ -40,10 +40,10 @@ def document(c32):
     performers = doc.tag('documentationOf').elsByTag('performer')
     for p in performers:
         el = p.tag('assignedPerson').tag('name')
-    performer_name_dict = parse_name(el)
-    performer_phone = p.tag('telecom').attr('value')
-    performer_addr = parse_address(el.tag('addr'))
-    documentation_of_list.append(wrappers.ObjectWrapper(
+        performer_name_dict = parse_name(el)
+        performer_phone = p.tag('telecom').attr('value')
+        performer_addr = parse_address(el.tag('addr'))
+        documentation_of_list.append(wrappers.ObjectWrapper(
         name=performer_name_dict,
         phone=wrappers.ObjectWrapper(
             work=performer_phone
