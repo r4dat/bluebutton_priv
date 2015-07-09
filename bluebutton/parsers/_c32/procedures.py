@@ -27,7 +27,7 @@ def procedures(c32):
 
         el = entry.tag('code')
         name = el.attr('displayName'),
-        ode = el.attr('code'),
+        code = el.attr('code'),
         code_system = el.attr('codeSystem')
 
         if not name:
