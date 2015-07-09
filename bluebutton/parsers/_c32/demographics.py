@@ -44,7 +44,7 @@ def demographics(c32):
     religion = patient.tag('religiousAffiliationCode').attr('displayName')
 
     el = patient.tag('birthplace')
-    birthplace_dict = parseAddress(el)
+    birthplace_dict = parse_address(el)
 
     el = patient.tag('guardian')
     guardian_relationship = el.tag('code').attr('displayName'),
@@ -52,15 +52,15 @@ def demographics(c32):
     guardian_home = el.tag('telecom').attr('value')
 
     el = el.tag('guardianPerson').tag('name')
-    guardian_name_dict = parseName(el)
+    guardian_name_dict = parse_name(el)
 
     el = patient.tag('guardian').tag('addr')
-    guardian_address_dict = parseAddress(el)
+    guardian_address_dict = parse_address(el)
 
     el = patient.tag('providerOrganization')
     provider_organization = el.tag('name').val(),
     provider_phone = el.tag('telecom').attr('value'),
-    provider_address_dict = parseAddress(el.tag('addr'))
+    provider_address_dict = parse_address(el.tag('addr'))
 
     return wrappers.ObjectWrapper(
         name=patient_name_dict,
