@@ -31,7 +31,7 @@ def document(c32):
     name_dict = parse_name(el)
     # Sometimes C32s include names that are just like <name>String</name>
     # and we still want to get something out in that case
-    if not name_dict.prefix and not name_dict.given.length and not name_dict.family:
+    if not name_dict.prefix and not len(name_dict.given) and not name_dict.family:
         name_dict.family = el.val()
     
     
