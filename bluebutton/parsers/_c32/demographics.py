@@ -7,6 +7,9 @@
 '''
  * Parser for the C32 demographics section
  */'''
+from ...core import wrappers
+from ... import core
+from ... import documents
 
 def demographics(c32):
     parse_date = documents.parse_date
