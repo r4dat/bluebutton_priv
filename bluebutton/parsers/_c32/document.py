@@ -9,6 +9,11 @@
  */
 '''
 
+from ...core import wrappers
+from ... import core
+from ... import documents
+
+
 def document(c32):
 
     parse_date = documents.parse_date
