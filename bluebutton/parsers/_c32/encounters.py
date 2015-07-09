@@ -1,5 +1,5 @@
 ###############################################################################
-# copyright 2015 kansas healthcare collaborative. all rights reserved.
+# copyright 2015 Kansas Healthcare Collaborative. all rights reserved.
 # this file is part of the bluebutton.py project.
 # use of this source code is governed by the license found in the license file.
 ###############################################################################
@@ -8,6 +8,9 @@
  * parser for the c32 encounters section
  */'''
 
+from ...core import wrappers
+from ...documents import parse_address, parse_date
+from ... import documents
 
 def encounters(c32):
     data = []

@@ -6,8 +6,11 @@
 
 from . import core
 from . import documents
+from . import parsers
 import documents.ccda
 import parsers.ccda
+import parsers.c32
+
 
 
 class BlueButton(object):
