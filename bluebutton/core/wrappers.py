@@ -91,3 +91,13 @@ def parse_number(s):
         return None
     value = float(s)
     return int(value) if value == int(value) else value
+
+def is_number(s):
+    #Return None for 0 even though 0 may be valid. (0 cancer cells from histology slide)
+    if not s:
+        return None
+    try:
+        float(s)
+        return True
+    except ValueError or TypeError:
+        return False

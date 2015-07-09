@@ -65,7 +65,7 @@ def results(c32):
                 unit = el.attr('unit')
                 # we could look for xsi:type="pq" (physical quantity) but it seems better
                 # not to trust that that field has been used correctly...
-                if value and wrappers.parse_number(value):
+                if value and wrappers.is_number(value):
                     value = wrappers.parse_number(value)
 
                 if not value:
