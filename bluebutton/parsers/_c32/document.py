@@ -39,7 +39,7 @@ def document(c32):
     documentation_of_list = wrappers.ListWrapper()
     performers = doc.tag('documentationOf').elsByTag('performer')
     for p in performers:
-    el = p.tag('assignedPerson').tag('name')
+        el = p.tag('assignedPerson').tag('name')
     performer_name_dict = parse_name(el)
     performer_phone = p.tag('telecom').attr('value')
     performer_addr = parse_address(el.tag('addr'))
