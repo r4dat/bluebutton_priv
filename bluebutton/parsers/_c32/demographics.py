@@ -26,7 +26,7 @@ def demographics(c32):
     el = patient.tag('patient')
     dob = parse_date(el.tag('birthTime').attr('value')),
     gender = core.codes.gender(el.tag('administrativeGenderCode').attr('code')),
-    marital_status = core.codes.maritalStatus(el.tag('maritalStatusCode').attr('code'))
+    marital_status = core.codes.marital_status(el.tag('maritalStatusCode').attr('code'))
 
     el = patient.tag('addr')
     patient_address_dict = parse_address(el)
