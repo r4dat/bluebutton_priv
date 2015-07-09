@@ -9,7 +9,7 @@ from .. import documents
 
 def process(c32):
     """
-    Preprocesses the CCDA docuemnt
+    Preprocesses the C32 docuemnt
     """
     c32.section = section
     return c32
