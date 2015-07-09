@@ -25,10 +25,8 @@ class BlueButton(object):
             type = documents.detect(parsed_data)
 
             if 'c32' == type:
-                # TODO: add support for legacy C32
-                # parsed_data = documents.C32.process(parsed_data)
-                # parsed_document = parsers.C32.run(parsed_data)
-                pass
+                parsed_data = documents.c32.process(parsed_data)
+                parsed_document = parsers.c32.run(parsed_data)
             elif 'ccda' == type:
                 parsed_data = documents.ccda.process(parsed_data)
                 parsed_document = parsers.ccda.run(parsed_data)
